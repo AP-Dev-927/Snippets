@@ -1,38 +1,39 @@
 SetCapsLockState, AlwaysOff
 
+; if capslock is pressed
 #IF GetKeyState("Capslock", "P")
-i::Up
-j::Left
-k::Down
-l::Right
-u::Home
-o::End
-p::Delete
-d::Backspace
-q::Delete
+  i::Up
+  j::Left
+  k::Down
+  l::Right
+  u::Home
+  o::End
+  p::Delete
+  d::Backspace
+  q::Delete
 
-z:: Send,^{F1} 
-
-
-;takes cursor to end of line, adds ();
-f::
-Send,{End}
-Send,();
-return
+  z:: Send,^{F1} 
 
 
+  ;takes cursor to end of line, adds ();
+  f::
+  Send,{End}
+  Send,();
+  return
 
-; SQL Shorthand
-+s::
-Send Select
-return
 
-+w::
-Send Where
-return	
 
-+f::
-Send From
+  ; SQL Shorthand
+  +s::
+  Send Select
+  return
+
+  +w::
+  Send Where
+  return	
+
+  +f::
+  Send From
 
 
 
