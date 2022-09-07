@@ -15,7 +15,8 @@ SetCapsLockState, AlwaysOff
   z:: Send,^{F1} 
 
 
-  ;takes cursor to end of line, adds ();
+  ; takes cursor to end of line, adds ();
+  ; useful to hide / show ribbon in office 
   f::
   Send,{End}
   Send,();
