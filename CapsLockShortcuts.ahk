@@ -1,41 +1,59 @@
 SetCapsLockState, AlwaysOff
 
+;Text Navigation Shortcuts 
 ; if capslock is pressed
 #IF GetKeyState("Capslock", "P")
-  i::Up
+  i::Up 
   j::Left
   k::Down
   l::Right
   u::Home
   o::End
+
   p::Delete
-  d::Backspace
-  q::Delete
-
-  z:: Send,^{F1} 
-
+  d::
+  q::
 
   ; takes cursor to end of line, adds ();
   ; useful to hide / show ribbon in office 
-  f::
-  Send,{End}
-  Send,();
-  return
 
 
 
   ; SQL Shorthand
   +s::
-  Send Select
+  Send SELECT
+  Send {Enter} 
+  Send {Tab}
   return
 
-  +w::
-  Send Where
-  return	
-
   +f::
-  Send From
+  Send FROM
+  Send {Enter} 
+  Send {Tab}
+  return
 
+  +h::
+  Send HAVING
+  Send {Enter} 
+  Send {Tab}
+  return
+
+
+  +w::
+  Send WHERE
+  Send {Enter} 
+  Send {Tab}
+  return
+
+  +l::
+  Send {,}
+  Send {Tab} 
+  Send {Enter}
+  return
+
+  +g::
+  Send {,}
+  return
 
 
 #if
@@ -48,3 +66,4 @@ CapsLock & i::ControlSend, OneNote::DocumentCanvas1, {Up}
 CapsLock & k::ControlSend, OneNote::DocumentCanvas1, {Down}
 #IfWinActive
 
+0
